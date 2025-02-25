@@ -112,3 +112,45 @@ individual, or aggression toward or disparagement of classes of individuals.
 
 **Consequence**: A permanent ban from any sort of public interaction within the
 community.
+
+## 5. No Phones During Meetings
+
+**Respect For The Group**: Showing respect to the group by not being distracting by cellphones is essential for the smooth development of the product. Being on your phone during meetings will be reflected in your individual group rating at the end of the week. 
+
+## 6. Decisions 
+
+**Group Decisions**: Decisions will be made based on a majority vote.
+
+## 7. Attendance
+
+**Attendance Matters**: You are expected to be at every group meeting. Constantly missing meetings will affect the performance of the group and the progess of the product. Show respect to you groupmates by being punctual and active during meetings.
+
+## 8. Assignments
+
+**Assignment Distribution**: Each member will have a designated task to complete. There will be weekly check-ins to make sure that there is progress being made towards these tasks. Members who do not complete their assignments will have their weekly rating affected.
+
+## 9. Participation
+
+**Member Participation**: Information and all communication will be shared in our Discord server. Members will be required to share their progress in the server once a week. Strengths and interests will be discussed within the group, to see if any member desires to complete a certain task.
+
+## 10. Meeting Times and Locations/Mediums
+
+**Meeting Times/Locations**: Outside of class, we will meet at least once per week. Depending on the complexity of our tasks for the week, we may either meet online via Discord, or in person at the URI Library.
+
+## 11. Agenda and Minutes/Notes
+
+**Notes**: We will have a running Doc with our notes; members are free to add to this doc whenever they please.
+
+## 12. Promptness
+
+**Promptness**: Members are expected to be on time for all meetings; things happen and occasional tardiness within reason is not a big deal. Consistent tardiness will be reflected in the member rating at the end of the week.
+
+## 13. Conversational Courtesies
+
+**Conversational Courtesies**: Being active in the group discussions, meetings, and work will result in positive reflections at the end of the week, showcasing that you are doing everything asked of you and that you are a valuable member of the team.
+
+## 14. Enforcement/Feedback
+
+**Enforcement/Feedback**: Most feedback will be in our weekly reflections, however any thoughts you may have can be sent within the Discord and will be addressed at the next group meeting.
+
+
