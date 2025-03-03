@@ -5,3 +5,7 @@
   * Students mostly use emails as their means of communication between schools
   * Every student said that they use email as a way to receive school updates
   * Make sure that there are emails sent out with updates in the app
+* Observation 3
+  * Students' top concern is homework & assignment notifications
+  * Homework & assingment notifications was the top voted feature that students said they cared about (82.1%)
+  * Prioritize the notification delivery system  
