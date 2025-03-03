@@ -8,4 +8,8 @@
 * Observation 3
   * Students' top concern is homework & assignment notifications
   * Homework & assingment notifications was the top voted feature that students said they cared about (82.1%)
-  * Prioritize the notification delivery system  
+  * Prioritize the notification delivery system
+* Observation 4
+  * Multiple people state that they receive too many emails or messages
+  * in the free response section people responded that too many emails was an issue
+  * Try to create some organization for the messages being sent out
