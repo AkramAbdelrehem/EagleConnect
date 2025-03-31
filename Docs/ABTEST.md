@@ -100,3 +100,54 @@ Larger text preview with a smaller image thumbnail.
 Increase in Post Interaction Rate
 Increase in Average Time Spent on Posts
 Higher Click Through Rate on Notifications
+
+# VAN DAVEY
+
+**A/B Test Name:**
+Rating System of App
+
+**User Story Number:**
+US2
+
+**Metrics (HEART Framework):**
+Happiness- [E.g., User satisfaction based on feedback or survey results]
+
+Engagement- [E.g., Time spent on the page, interaction rate]
+
+Adoption- [E.g., Percentage of users completing the signup process]
+
+Retention- [E.g., Users returning after X days post-signup]
+
+Task Success- [E.g., Completion rate of the process without errors]
+
+**Hypothesis:**
+At the moment, we have a 1-5 star rating bar for users to rate the app 1-5, a possible short answer response may be better.
+
+**What Problem Are We Trying to Solve?**
+Problem Statement- 
+Getting feedback on the app.
+
+**Impact:** I want users to feel that their rating matters in the app. 
+
+**Experiment Setup:**
+Audience Allocation: 50% of new users will see Version A (1-5 star rating system), and 50% will see Version B (short-answer response).
+
+**Firebase Tools Used:** Firebase Analytics for field updating.
+
+**Tracking Setup:** The time it took to finish their sign up and if they signed up at all.
+
+**Variations:**
+Variation A - A 1-5 star rating bar. 
+
+Variation B - Small text box allowing for you to write an honest review of the app.
+
+**Success Criteria:**
+
+Primary metric for success: 
+
+Higher completion rate of rating on app.
+
+Secondary metrics: 
+
+More meaningful reviews on the app.
+
