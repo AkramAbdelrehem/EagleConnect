@@ -7,3 +7,5 @@ https://docs.google.com/presentation/d/1v8BxAzdFT00FqFAORmNNotVFEREkEaLoWt3GCc_C
 - we will use flutterflows built in integration with firebase analytics to collect the ammount of daily active users
 ## Daily Active Users
 - We will use Firebase's built in DAU tracking to view our daily active users
+## NPS
+- We will implement a rating system to obtain an NPS
