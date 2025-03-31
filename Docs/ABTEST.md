@@ -1,5 +1,5 @@
 
-HILSON JESUS
+## HILSON JESUS
 
 **A/B Test Name:**
 Sign Up Screen Background 
@@ -48,3 +48,55 @@ Higher completion rate of signup process.
 Secondary metrics: 
 
 Lower bounce rate, reduced time taken to complete signup.
+
+## LUKE PETRARCA
+
+**A/B Test Name:**
+Post Engagement: Image-First vs. Text-First Display
+
+**USER STORY NUMBER:**
+US2
+
+**Metrics (HEART FRAMEWORK):**
+Happiness: User satisfaction with post visibility and readability (via in-app surveys or Net Promoter Score).
+
+Engagement: Number of likes, comments, and shares per post.
+
+Retention: Frequency of users returning to interact with posts.
+
+Task Success: Time spent on posts (determining if users engage more deeply with one format over the other).
+
+**Hypothesis:**
+We believe that prioritizing images over text in the post feed (larger image previews, minimized text) will drive higher engagement (likes/comments) compared to a text-first feed (where text appears first and images are secondary). If true, this means users engage more with visually driven content, which can help increase participation in discussions and interactions.
+
+**What Problem Are We Trying to Solve?**
+Problem:
+Admins create posts, but we need to optimize the way users interact with them. If the post format does not align with user preferences, engagement could drop, reducing the effectiveness of announcements, discussions, and updates.
+
+Impact:
+Higher engagement means increased platform usefulness for schools.
+If images drive more interactions, optimizing for image-first posts can boost participation in discussions.
+
+**Experiment Setup:**
+Audience: 50% of users will see Version A (image-first), while 50% see Version B (text-first).
+
+**Firebase Tools Used:**
+Firebase Remote Config: Used to toggle between the two variations.
+
+**Tracking Setup:**
+post_viewed (When a user views a post)
+post_interacted (Tracks likes, comments, shares)
+time_on_post (Measures how long users spend reading/interacting)
+notification_clicked (If users engage more when notified about new posts)
+
+**Variations:**
+A (Image-First Feed - Default View)
+Large image preview, with text appearing smaller underneath.
+
+B (Text-First Feed - Alternative View)
+Larger text preview with a smaller image thumbnail.
+
+**Sucess Criteria:**
+Increase in Post Interaction Rate
+Increase in Average Time Spent on Posts
+Higher Click Through Rate on Notifications
