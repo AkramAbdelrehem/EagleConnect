@@ -151,3 +151,48 @@ Secondary metrics:
 
 More meaningful reviews on the app.
 
+# AKRAM ABDELREHEM
+
+**A/B Test Name:**
+App Design
+
+**User Story Number:**
+US4
+
+**Metrics (HEART Framework):**
+Happiness- [E.g., User satisfaction based on in-app navigation]
+
+Engagement- [E.g., Fluidity between pages]
+
+Task Success- [E.g., Navigating between pages without errors]
+
+**Hypothesis:**
+Choosing between tabs vs a bottom navigation bar will effect the visual presentation of the app. We want to choose the most subtle and effective option for navigating within EagleConnect.
+
+**What Problem Are We Trying to Solve?**
+Problem: The tapbar is currently clunky. We want to either improve it, or implement a bottom navigation bar.
+
+**Impact:**
+The more professional the app looks and feels, the more people will want to use it. We want the most straightforward and user-friendly navigation so anyone can feel like EagleConnect is easy to use.
+
+**Experiment Setup:**
+Audience Allocation: 50% of new users will see Version A (Tabbar), and 50% will see Version B (bottom-navigation bar).
+
+**Firebase Tools Used:**
+Firebase Remote Config: Used to toggle between the two variations.
+
+**Tracking Setup:** The time it took to go from one tab to another.
+
+**Variations:**
+Variation A: Tabbar setup. 
+
+Variation B: Bottom-navigation bar setup.
+
+**Sucess Criteria:**
+Primary metric for success: 
+
+Fastest navigation between tabs within the app.
+
+Secondary metrics: 
+
+User feedback on which setup they like better.
