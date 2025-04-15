@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "144812187649",
+    "firebase_url": "https://eagleconnect-7f45e-default-rtdb.firebaseio.com",
+    "project_id": "eagleconnect-7f45e",
+    "storage_bucket": "eagleconnect-7f45e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144812187649:android:5c46c2545093c5504ee000",
+        "android_client_info": {
+          "package_name": "com.mycompany.eagleconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144812187649-15bl7fv9snn4f82oijcu0vetjeedmr1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.eagleconnect",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "144812187649-s5jhph4eq9cfjnjcj58su0mujmkua2qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEHWrSD-U4ScOJh3mhPYYUYgAXnLUsjgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144812187649-6220fg9jrf7fn779i9f6fmgt7hhgidbq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "144812187649-ggcsegahhnd9d2a85nl3c6vacgvhq160.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.eagleconnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
