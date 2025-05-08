@@ -37,6 +37,8 @@ abstract class FlutterFlowTheme {
   late Color baldEagleDarkBrown;
   late Color baldEagleLightBrown;
   late Color baldEagleText;
+  late Color niceBlue;
+  late Color translucentWhite;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -131,6 +133,8 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color baldEagleDarkBrown = Color(0xFF6C2E04);
   late Color baldEagleLightBrown = Color(0xFFAC6E04);
   late Color baldEagleText = Color(0xFF240F00);
+  late Color niceBlue = Color(0xFF169BCF);
+  late Color translucentWhite = Color(0x66FFFFFF);
 }
 
 abstract class Typography {
@@ -172,111 +176,96 @@ class ThemeTypography extends Typography {
   final FlutterFlowTheme theme;
 
   String get displayLargeFamily => 'Inter Tight';
-  TextStyle get displayLarge => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get displayLarge => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 64.0,
       );
   String get displayMediumFamily => 'Inter Tight';
-  TextStyle get displayMedium => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get displayMedium => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 44.0,
       );
   String get displaySmallFamily => 'Inter Tight';
-  TextStyle get displaySmall => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get displaySmall => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
   String get headlineLargeFamily => 'Roboto';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Roboto',
+  TextStyle get headlineLarge => GoogleFonts.roboto(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineMediumFamily => 'Eagle Lake';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Eagle Lake',
+  TextStyle get headlineMedium => GoogleFonts.eagleLake(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
         fontStyle: FontStyle.normal,
       );
   String get headlineSmallFamily => 'Inter Tight';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get headlineSmall => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 24.0,
       );
   String get titleLargeFamily => 'Inter Tight';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get titleLarge => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 20.0,
       );
   String get titleMediumFamily => 'Eagle Lake';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'Eagle Lake',
+  TextStyle get titleMedium => GoogleFonts.eagleLake(
         color: theme.baldEagleText,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
   String get titleSmallFamily => 'Inter Tight';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'Inter Tight',
+  TextStyle get titleSmall => GoogleFonts.interTight(
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 16.0,
       );
   String get labelLargeFamily => 'Roboto';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Roboto',
+  TextStyle get labelLarge => GoogleFonts.roboto(
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
         fontStyle: FontStyle.normal,
       );
   String get labelMediumFamily => 'Inter';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'Inter',
+  TextStyle get labelMedium => GoogleFonts.inter(
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
   String get labelSmallFamily => 'Inter';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'Inter',
+  TextStyle get labelSmall => GoogleFonts.inter(
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
   String get bodyLargeFamily => 'Roboto';
-  TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Roboto',
+  TextStyle get bodyLarge => GoogleFonts.roboto(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
         fontStyle: FontStyle.normal,
       );
   String get bodyMediumFamily => 'Inter';
-  TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Inter',
+  TextStyle get bodyMedium => GoogleFonts.inter(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
   String get bodySmallFamily => 'Inter';
-  TextStyle get bodySmall => GoogleFonts.getFont(
-        'Inter',
+  TextStyle get bodySmall => GoogleFonts.inter(
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
@@ -286,38 +275,47 @@ class ThemeTypography extends Typography {
 
 extension TextStyleHelper on TextStyle {
   TextStyle override({
+    TextStyle? font,
     String? fontFamily,
     Color? color,
     double? fontSize,
     FontWeight? fontWeight,
     double? letterSpacing,
     FontStyle? fontStyle,
-    bool useGoogleFonts = true,
+    bool useGoogleFonts = false,
     TextDecoration? decoration,
     double? lineHeight,
     List<Shadow>? shadows,
-  }) =>
-      useGoogleFonts
-          ? GoogleFonts.getFont(
-              fontFamily!,
-              color: color ?? this.color,
-              fontSize: fontSize ?? this.fontSize,
-              letterSpacing: letterSpacing ?? this.letterSpacing,
-              fontWeight: fontWeight ?? this.fontWeight,
-              fontStyle: fontStyle ?? this.fontStyle,
-              decoration: decoration,
-              height: lineHeight,
-              shadows: shadows,
-            )
-          : copyWith(
-              fontFamily: fontFamily,
-              color: color,
-              fontSize: fontSize,
-              letterSpacing: letterSpacing,
-              fontWeight: fontWeight,
-              fontStyle: fontStyle,
-              decoration: decoration,
-              height: lineHeight,
-              shadows: shadows,
-            );
+    String? package,
+  }) {
+    if (useGoogleFonts && fontFamily != null) {
+      font = GoogleFonts.getFont(fontFamily,
+          fontWeight: fontWeight ?? this.fontWeight,
+          fontStyle: fontStyle ?? this.fontStyle);
+    }
+
+    return font != null
+        ? font.copyWith(
+            color: color ?? this.color,
+            fontSize: fontSize ?? this.fontSize,
+            letterSpacing: letterSpacing ?? this.letterSpacing,
+            fontWeight: fontWeight ?? this.fontWeight,
+            fontStyle: fontStyle ?? this.fontStyle,
+            decoration: decoration,
+            height: lineHeight,
+            shadows: shadows,
+          )
+        : copyWith(
+            fontFamily: fontFamily,
+            package: package,
+            color: color,
+            fontSize: fontSize,
+            letterSpacing: letterSpacing,
+            fontWeight: fontWeight,
+            fontStyle: fontStyle,
+            decoration: decoration,
+            height: lineHeight,
+            shadows: shadows,
+          );
+  }
 }

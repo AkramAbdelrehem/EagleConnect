@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'feed_tab_bar_model.dart';
 export 'feed_tab_bar_model.dart';
@@ -94,12 +95,23 @@ class _FeedTabBarWidgetState extends State<FeedTabBarWidget> {
                   Text(
                     'Global Feed',
                     style: FlutterFlowTheme.of(context).bodySmall.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontStyle,
+                          ),
                           color: FFAppState().currentFeed == 'Global'
                               ? FlutterFlowTheme.of(context).primaryText
                               : Color(0xA657636C),
                           fontSize: 12.0,
                           letterSpacing: 0.0,
+                          fontWeight:
+                              FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodySmall.fontStyle,
                         ),
                   ),
                 ],
@@ -132,12 +144,25 @@ class _FeedTabBarWidgetState extends State<FeedTabBarWidget> {
                     Text(
                       'Classes',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .fontStyle,
+                            ),
                             color: FFAppState().currentFeed == 'Classes'
                                 ? FlutterFlowTheme.of(context).primaryText
                                 : Color(0xA657636C),
                             fontSize: 12.0,
                             letterSpacing: 0.0,
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontStyle,
                           ),
                     ),
                   ],
@@ -169,10 +194,21 @@ class _FeedTabBarWidgetState extends State<FeedTabBarWidget> {
                   Text(
                     'Clubs',
                     style: FlutterFlowTheme.of(context).bodySmall.override(
-                          fontFamily: 'Inter',
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .fontStyle,
+                          ),
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 12.0,
                           letterSpacing: 0.0,
+                          fontWeight:
+                              FlutterFlowTheme.of(context).bodySmall.fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodySmall.fontStyle,
                         ),
                   ),
                 ],

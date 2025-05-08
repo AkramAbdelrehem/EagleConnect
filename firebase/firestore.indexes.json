@@ -1,6 +1,48 @@
 {
   "indexes": [
     {
+      "collectionGroup": "Classes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "teacher_ref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "student_ref",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "shcool_ref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "event_date",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "assignment",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "category_ref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "due_date",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "message",
       "queryScope": "COLLECTION",
       "fields": [
@@ -9,7 +51,25 @@
           "order": "ASCENDING"
         },
         {
+          "fieldPath": "message_sender",
+          "order": "ASCENDING"
+        },
+        {
           "fieldPath": "time_sent",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "assignment",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "category_ref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "due_date",
           "order": "ASCENDING"
         }
       ]
@@ -19,6 +79,16 @@
     {
       "collectionGroup": "comments",
       "fieldPath": "post_reference",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grading_Categories",
+      "fieldPath": "class_ref",
       "indexes": [
         {
           "order": "ASCENDING",

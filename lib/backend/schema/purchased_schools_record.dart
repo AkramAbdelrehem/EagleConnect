@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -66,6 +65,21 @@ class PurchasedSchoolsRecord extends FirestoreRecord {
   String get schoolAddress => _schoolAddress ?? '';
   bool hasSchoolAddress() => _schoolAddress != null;
 
+  // "Administrators" field.
+  List<DocumentReference>? _administrators;
+  List<DocumentReference> get administrators => _administrators ?? const [];
+  bool hasAdministrators() => _administrators != null;
+
+  // "Teachers" field.
+  List<DocumentReference>? _teachers;
+  List<DocumentReference> get teachers => _teachers ?? const [];
+  bool hasTeachers() => _teachers != null;
+
+  // "Students" field.
+  List<DocumentReference>? _students;
+  List<DocumentReference> get students => _students ?? const [];
+  bool hasStudents() => _students != null;
+
   void _initializeFields() {
     _schoolName = snapshotData['school_name'] as String?;
     _pricePaid = castToType<double>(snapshotData['price_paid']);
@@ -77,6 +91,9 @@ class PurchasedSchoolsRecord extends FirestoreRecord {
     _schoolGradeLevels = getDataList(snapshotData['school_grade_levels']);
     _schoolWebsite = snapshotData['school_website'] as String?;
     _schoolAddress = snapshotData['school_address'] as String?;
+    _administrators = getDataList(snapshotData['Administrators']);
+    _teachers = getDataList(snapshotData['Teachers']);
+    _students = getDataList(snapshotData['Students']);
   }
 
   static CollectionReference get collection =>
@@ -158,7 +175,10 @@ class PurchasedSchoolsRecordDocumentEquality
         e1?.schoolType == e2?.schoolType &&
         listEquality.equals(e1?.schoolGradeLevels, e2?.schoolGradeLevels) &&
         e1?.schoolWebsite == e2?.schoolWebsite &&
-        e1?.schoolAddress == e2?.schoolAddress;
+        e1?.schoolAddress == e2?.schoolAddress &&
+        listEquality.equals(e1?.administrators, e2?.administrators) &&
+        listEquality.equals(e1?.teachers, e2?.teachers) &&
+        listEquality.equals(e1?.students, e2?.students);
   }
 
   @override
@@ -172,7 +192,10 @@ class PurchasedSchoolsRecordDocumentEquality
         e?.schoolType,
         e?.schoolGradeLevels,
         e?.schoolWebsite,
-        e?.schoolAddress
+        e?.schoolAddress,
+        e?.administrators,
+        e?.teachers,
+        e?.students
       ]);
 
   @override

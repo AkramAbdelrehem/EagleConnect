@@ -40,5 +40,67 @@ service cloud.firestore {
       allow write: if false;
       allow delete: if false;
     }
+
+    match /events/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Classes/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Classes/{parent}/grading_Categories/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/grading_Categories/{document} {
+      allow read: if true;
+    }
+
+
+    match /Classes/{parent}/assignment/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/assignment/{document} {
+      allow read: if true;
+    }
+
+
+    match /Classes/{parent}/grades/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/grades/{document} {
+      allow read: if true;
+    }
+
+
+    match /Classes/{parent}/final_grade/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/final_grade/{document} {
+      allow read: if true;
+    }
+
   }
 }

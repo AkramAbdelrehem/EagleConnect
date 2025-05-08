@@ -1,5 +1,5 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_calendar.dart';
+import '/components/calendar_component_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'main_page_widget.dart' show MainPageWidget;
@@ -14,6 +14,14 @@ class MainPageModel extends FlutterFlowModel<MainPageWidget> {
 
   DocumentReference? sentMessage;
 
+  DateTime? selectedDate;
+
+  String eventsPage = 'selectedDate';
+
+  DateTime? selectedDateStart;
+
+  DateTime? selectedDateEnd;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Pages widget.
@@ -24,17 +32,24 @@ class MainPageModel extends FlutterFlowModel<MainPageWidget> {
           pagesController!.page != null
       ? pagesController!.page!.round()
       : 0;
-  // State field(s) for Calendar widget.
-  DateTimeRange? calendarSelectedDay;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode;
+  TextEditingController? textController;
+  String? Function(BuildContext, String?)? textControllerValidator;
+  // Model for Calendar_Component component.
+  late CalendarComponentModel calendarComponentModel;
 
   @override
   void initState(BuildContext context) {
-    calendarSelectedDay = DateTimeRange(
-      start: DateTime.now().startOfDay,
-      end: DateTime.now().endOfDay,
-    );
+    calendarComponentModel =
+        createModel(context, () => CalendarComponentModel());
   }
 
   @override
-  void dispose() {}
+  void dispose() {
+    textFieldFocusNode?.dispose();
+    textController?.dispose();
+
+    calendarComponentModel.dispose();
+  }
 }

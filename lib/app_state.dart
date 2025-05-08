@@ -46,4 +46,11 @@ class FFAppState extends ChangeNotifier {
   set postReference(DocumentReference? value) {
     _postReference = value;
   }
+
+  String _profilePhoto =
+      'https://images.unsplash.com/photo-1511367461989-f85a21fda167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxwcm9maWxlfGVufDB8fHx8MTc0NDg5NTMwMnww&ixlib=rb-4.0.3&q=80&w=1080';
+  String get profilePhoto => _profilePhoto;
+  set profilePhoto(String value) {
+    _profilePhoto = value;
+  }
 }

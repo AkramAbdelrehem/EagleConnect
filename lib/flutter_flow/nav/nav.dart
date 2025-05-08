@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -98,19 +100,83 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => SignUpWidget(),
         ),
         FFRoute(
-          name: LoggedInWidget.routeName,
-          path: LoggedInWidget.routePath,
-          builder: (context, params) => LoggedInWidget(),
-        ),
-        FFRoute(
-          name: WelcomePagePopUpNewUserWidget.routeName,
-          path: WelcomePagePopUpNewUserWidget.routePath,
-          builder: (context, params) => WelcomePagePopUpNewUserWidget(),
+          name: SubscriptionPlansPageWidget.routeName,
+          path: SubscriptionPlansPageWidget.routePath,
+          builder: (context, params) => SubscriptionPlansPageWidget(),
         ),
         FFRoute(
           name: MainPageWidget.routeName,
           path: MainPageWidget.routePath,
           builder: (context, params) => MainPageWidget(),
+        ),
+        FFRoute(
+          name: GradingStructurePageWidget.routeName,
+          path: GradingStructurePageWidget.routePath,
+          builder: (context, params) => GradingStructurePageWidget(
+            classRef: params.getParam(
+              'classRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['Classes'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: CreateClassWidget.routeName,
+          path: CreateClassWidget.routePath,
+          builder: (context, params) => CreateClassWidget(),
+        ),
+        FFRoute(
+          name: EditGradePageWidget.routeName,
+          path: EditGradePageWidget.routePath,
+          builder: (context, params) => EditGradePageWidget(
+            classRef: params.getParam(
+              'classRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['Classes'],
+            ),
+            studentIndex: params.getParam(
+              'studentIndex',
+              ParamType.int,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: ProfileViewWidget.routeName,
+          path: ProfileViewWidget.routePath,
+          builder: (context, params) => ProfileViewWidget(
+            profilePic: params.getParam(
+              'profilePic',
+              ParamType.String,
+            ),
+            accountName: params.getParam(
+              'accountName',
+              ParamType.String,
+            ),
+            accountLastName: params.getParam(
+              'accountLastName',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: GradesViewWidget.routeName,
+          path: GradesViewWidget.routePath,
+          builder: (context, params) => GradesViewWidget(
+            classRef: params.getParam(
+              'classRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['Classes'],
+            ),
+            studentRef: params.getParam(
+              'studentRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['users'],
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -230,6 +296,7 @@ class FFParameters {
     ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -248,6 +315,7 @@ class FFParameters {
       type,
       isList,
       collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
     );
   }
 }
